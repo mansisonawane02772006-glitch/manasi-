@@ -1,0 +1,274 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#FFF8F0;
+    color:#2D1B12;
+    line-height:1.6;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    background:#FF6B35;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#fff;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffe5d0;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 0;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-text input{
+    width:320px;
+    max-width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    margin-right:10px;
+    box-shadow:0 0 8px rgba(0,0,0,.1);
+}
+
+.hero-text button{
+    background:#FF6B35;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero-text button:hover{
+    background:#e45720;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:450px;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+section h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+/* ===========================
+   CATEGORIES
+=========================== */
+
+.categories{
+    width:90%;
+    margin:60px auto;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:white;
+    border-radius:12px;
+    text-align:center;
+    padding:35px;
+    font-size:45px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.category-card h3{
+    margin-top:15px;
+    font-size:22px;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+    background:#FF6B35;
+    color:white;
+}
+
+/* ===========================
+   RESTAURANTS
+=========================== */
+
+.restaurants{
+    width:90%;
+    margin:70px auto;
+}
+
+.restaurant-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.restaurant-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.restaurant-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.restaurant-card h3,
+.restaurant-card p{
+    padding:8px 20px;
+}
+
+.restaurant-card button{
+    margin:20px;
+    padding:12px 22px;
+    border:none;
+    background:#FF6B35;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.restaurant-card:hover{
+    transform:scale(1.03);
+}
+
+/* ===========================
+   POPULAR DISHES
+=========================== */
+
+.popular{
+    width:90%;
+    margin:70px auto;
+}
+
+.dish-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.dish{
+    background:white;
+    border-radius:12px;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.dish img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.dish h3{
+    margin:15px 0;
+}
+
+.dish p{
+    font-size:20px;
+    color:#FF6B35;
+    font-weight:600;
+}
+
+.dish button{
+    margin-top:15px;
+    background:#FF6B35;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu with Images</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:20px;
+}
+
+.container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.menu,.cart{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+.menu{
+    flex:2;
+}
+
+.cart{
+    flex:1;
+    min-width:250px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.food-img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #ddd;
+}
+
+button{
+    background:green;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkgreen;
+}
+
+.remove{
+    background:red;
+}
+
+.remove:hover{
+    background:darkred;
+}
+
+h2{
+    color:#d35400;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Menu -->
+<div class="menu">
+<h2>🍽 Restaurant Menu</h2>
+
+<table>
+
+<tr>
+<th>Image</th>
+<th>Item</th>
+<th>Price</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td><img src="panner.jpg" class="food-img" alt="Paneer Butter Masala"></td>
+<td>Paneer Butter Masala</td>
+<td>$10</td>
+<td><button onclick="addToCart('Paneer Butter Masala',10)">Add</button></td>
+</tr>
+
+<tr>
+<td><img src="biryani.jpg" class="food-img" alt="Veg Biryani"></td>
+<td>Veg Biryani</td>
+<td>$8</td>
+<td><button onclick="addToCart('Veg Biryani',8)">Add</button></td>
+</tr>
+
+<tr>
+<td><img src="tikka.jpg" class="food-img" alt="Butter Chicken"></td>
+<td>Chicken tikka</td>
+<td>$13</td>
+<td><button onclick="addToCart(' Chicken tikka',13)">Add</button></td>
+</tr>
+
+<tr>
+<td><img src="chikan.jpg" class="food-img" alt="Chicken Biryani"></td>
+<td>Chicken Biryani</td>
+<td>$12</td>
+<td><button onclick="addToCart('Chicken Biryani',12)">Add</button></td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- Cart -->
+<div class="cart">
+<h2>🛒 Cart</h2>
+
+<ul id="cartItems"></ul>
+
+<h3>Total: $<span id="total">0</span></h3>
+
+<button onclick="checkout()">Checkout</button>
+</div>
+
+</div>
+
+<script>
+let total = 0;
+
+function addToCart(name, price){
+    let li = document.createElement("li");
+    li.innerHTML = `${name} - $${price}
+    <button class="remove" onclick="removeItem(this,${price})">X</button>`;
+
+    document.getElementById("cartItems").appendChild(li);
+
+    total += price;
+    document.getElementById("total").innerText = total;
+}
+
+function removeItem(btn, price){
+    btn.parentElement.remove();
+    total -= price;
+    document.getElementById("total").innerText = total;
+}
+
+function checkout(){
+    if(total==0){
+        alert("Your cart is empty!");
+    }else{
+        alert("Order Placed Successfully!\nTotal = $" + total);
+    }
+}
+</script>
+
+</body>
+</html>

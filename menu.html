@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    width:80%;
+    margin:30px auto;
+}
+
+h1{
+    text-align:center;
+    color:#d35400;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    background:#fff;
+    width:350px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+
+.card h2{
+    text-align:center;
+    padding:15px;
+    color:#fff;
+    margin:0;
+}
+
+.veg{
+    background:green;
+}
+
+.nonveg{
+    background:#c0392b;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table tr{
+    border-bottom:1px solid #ddd;
+}
+
+table td{
+    padding:12px;
+}
+
+.price{
+    text-align:right;
+    font-weight:bold;
+    color:#444;
+}
+
+table tr:hover{
+    background:#f9f9f9;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>🍽 Restaurant Menu</h1>
+
+    <div class="menu">
+
+        <!-- Veg Menu -->
+        <div class="card">
+            <h2 class="veg">🥗 Veg Menu</h2>
+
+            <table>
+                <tr>
+                    <td>Paneer Butter Masala</td>
+                    <td class="price">$10</td>
+                </tr>
+                <tr>
+                    <td>Veg Biryani</td>
+                    <td class="price">$8</td>
+                </tr>
+                <tr>
+                    <td>Dal Tadka</td>
+                    <td class="price">$7</td>
+                </tr>
+                <tr>
+                    <td>Mix Veg Curry</td>
+                    <td class="price">$9</td>
+                </tr>
+                <tr>
+                    <td>Butter Naan</td>
+                    <td class="price">$2</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Non-Veg Menu -->
+        <div class="card">
+            <h2 class="nonveg">🍗 Non-Veg Menu</h2>
+
+            <table>
+                <tr>
+                    <td>Chicken Biryani</td>
+                    <td class="price">$12</td>
+                </tr>
+                <tr>
+                    <td>Butter Chicken</td>
+                    <td class="price">$13</td>
+                </tr>
+                <tr>
+                    <td>Chicken Tikka</td>
+                    <td class="price">$13</td>
+                </tr>
+                <tr>
+                    <td>Mutton Curry</td>
+                    <td class="price">$15</td>
+                </tr>
+                <tr>
+                    <td>Fish Fry</td>
+                    <td class="price">$14</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

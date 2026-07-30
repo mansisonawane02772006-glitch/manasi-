@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurants in India</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+h1{
+    color:#ff5722;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+}
+
+.card h2{
+    color:#ff5722;
+}
+
+.card p{
+    padding:0 10px;
+}
+
+button{
+    background:#ff5722;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    margin:15px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#e64a19;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🍽️ Popular Restaurants in India</h1>
+
+<div class="container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500" alt="Restaurant">
+<h2>bukhara</h2>
+<p>📍 New Delhi</p>
+<button onclick="window.open('https://maps.google.com/?q=Bukhara New Delhi')">
+View Location
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=500" alt="Restaurant">
+<h2>Paradise Biryani</h2>
+<p>📍 Hyderabad</p>
+<button onclick="window.open('https://maps.google.com/?q=Paradise Biryani Hyderabad')">
+View Location
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=500" alt="Restaurant">
+<h2>Karavalli</h2>
+<p>📍 Bengaluru</p>
+<button onclick="window.open('https://maps.google.com/?q=Karavalli Bengaluru')">
+View Location
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500" alt="Restaurant">
+<h2>Peter Cat</h2>
+<p>📍 Kolkata</p>
+<button onclick="window.open('https://maps.google.com/?q=Peter Cat Kolkata')">
+View Location
+</button>
+</div>
+
+</div>
+
+</body>
+</html>
