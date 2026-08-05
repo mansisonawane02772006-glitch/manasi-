@@ -1,298 +1,862 @@
+
+
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreshBite | Online Food Ordering</title>
+
+<title>StyleHub | Fashion Store</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+
+<!-- NAVBAR -->
 
 <header>
 
 <nav class="navbar">
 
 <div class="logo">
-🍔 FreshBite
+<i class="fa-solid fa-shirt"></i> StyleHub
 </div>
+
+
+<div class="search-box">
+
+<input type="text" id="searchInput" placeholder="Search Products">
+
+<button onclick="searchProduct()">
+
+<i class="fa fa-search"></i>
+
+</button>
+
+</div>
+
 
 <ul class="nav-links">
 
-<li><a href="#">Home</a></li>
+<li><a href="#home">Home</a></li>
 
-<li><a href="restaurants.html">Restaurants</a></li>
+<li><a href="#products">Products</a></li>
 
-<li><a href="menu.html">Menu</a></li>
+<li><a href="#about">About</a></li>
 
-<li><a href="cart.html">Cart</a></li>
+<li><a href="#contact">Contact</a></li>
 
-<li><a href="account.html">account</a></li>
+
+<li>
+
+<a href="#wishlist">
+
+<i class="fa-solid fa-heart"></i>
+
+<span id="wishlistCount">0</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cartCount">0</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<button class="login-btn" onclick="openLogin()">
+Login
+</button>
+
+</li>
+
 
 </ul>
+
 
 </nav>
 
 </header>
 
-<!-- ================= HERO ================= -->
 
-<section class="hero">
 
-<div class="hero-text">
+<!-- HERO -->
 
-<h1>Delicious Food Delivered Fast</h1>
+
+<section class="hero" id="home">
+
+
+<div class="hero-content">
+
+
+<h1>
+Fashion That Defines You
+</h1>
+
 
 <p>
-Fresh meals from your favourite restaurants.
+Discover Premium Clothing For Men, Women & Kids
 </p>
 
-<input
-type="text"
-placeholder="Search food or restaurant">
 
-<button>Order Now</button>
+<button onclick="scrollProducts()">
 
-</div>
+Shop Now
 
-<div class="hero-image">
+</button>
 
-<img src="chikan.jpg" alt="Food">
 
 </div>
+
 
 </section>
 
-<!-- ================= CATEGORIES ================= -->
+
+
+
+
+<!-- CATEGORY -->
+
 
 <section class="categories">
 
-<h2>Food Categories</h2>
+
+<h2>
+Shop By Category
+</h2>
+
 
 <div class="category-grid">
 
-<div class="category-card">
-🍕
-<h3>Pizza</h3>
-</div>
 
 <div class="category-card">
-🍔
-<h3>Burger</h3>
+
+<img src="jeans.jpg">
+
+<h3>Men</h3>
+
 </div>
+
+
 
 <div class="category-card">
-🍜
-<h3>Noodles</h3>
+
+<img src="floral.jpg">
+
+<h3>Women</h3>
+
 </div>
+
+
 
 <div class="category-card">
-🌮
-<h3>Mexican</h3>
-</div>
 
-<div class="category-card">
-🍰
-<h3>Desserts</h3>
-</div>
+<img src="kids.jpg">
 
-<div class="category-card">
-🥗
-<h3>Healthy</h3>
-</div>
+<h3>Kids</h3>
 
 </div>
+
+
+</div>
+
 
 </section>
 
-<!-- ================= FEATURED RESTAURANTS ================= -->
 
-<section class="restaurants">
 
-<h2>Featured Restaurants</h2>
 
-<div class="restaurant-grid">
 
-<div class="restaurant-card">
 
-<img src="burgerhouse.jpg">
+<!-- FILTER -->
 
-<h3>bukhar</h3>
 
-<p>⭐⭐⭐⭐⭐</p>
+<section class="filter-section">
 
-<p>30 mins</p>
 
-<button>View Menu</button>
+<h2>
+Filters
+</h2>
+
+
+<div class="filters">
+
+
+<select id="categoryFilter">
+
+<option value="">
+Category
+</option>
+
+<option>
+Men
+</option>
+
+<option>
+Women
+</option>
+
+<option>
+Kids
+</option>
+
+</select>
+
+
+
+<select id="sizeFilter">
+
+<option>
+Size
+</option>
+
+<option>S</option>
+
+<option>M</option>
+
+<option>L</option>
+
+<option>XL</option>
+
+</select>
+
+
+
+<select id="colorFilter">
+
+<option>
+Color
+</option>
+
+<option>
+Black
+</option>
+
+<option>
+Blue
+</option>
+
+<option>
+Pink
+</option>
+
+<option>
+White
+</option>
+
+</select>
+
+
+
+
+<select id="priceFilter">
+
+<option>
+Price
+</option>
+
+<option>
+Below ₹500
+</option>
+
+<option>
+₹500-1000
+</option>
+
+<option>
+Above ₹1000
+</option>
+
+</select>
+
+
+<button onclick="applyFilters()">
+
+Apply
+
+</button>
+
 
 </div>
 
-<div class="restaurant-card">
-
-<img src="pizzaplace.jpg">
-
-<h3>Paradise Biryani</h3>
-
-<p>⭐⭐⭐⭐☆</p>
-
-<p>25 mins</p>
-
-<button>View Menu</button>
-
-</div>
-
-<div class="restaurant-card">
-
-<img src="spicyindia.jpg">
-
-<h3>karavalli</h3>
-
-<p>⭐⭐⭐⭐⭐</p>
-
-<p>20 mins</p>
-
-<button>View Menu</button>
-
-</div>
-
-</div>
 
 </section>
 
-<!-- ================= POPULAR DISHES ================= -->
 
-<section class="popular">
 
-<h2>Popular Dishes</h2>
 
-<div class="dish-grid">
 
-<div class="dish">
 
-<img src="panner.jpg">
+<!-- PRODUCTS -->
 
-<h3>Farmhouse panner</h3>
 
-<p>$10</p>
+<section id="products">
 
-<button>Add to Cart</button>
+
+<h2>
+Featured Products
+</h2>
+
+
+<div class="product-grid" id="productGrid">
+
+
+
+<div class="product-card">
+
+
+<img src="shirt.jpg">
+
+
+<h3>
+Premium Men's Shirt
+</h3>
+
+
+<p>
+₹799
+</p>
+
+
+<button>
+Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="product-card">
+
+
+<img src="Gown.jpg">
+
+
+<h3>
+Floral Women Dress
+</h3>
+
+
+<p>
+₹1299
+</p>
+
+
+<button>
+Add To Cart
+</button>
+
 
 </div>
 
-<div class="dish">
 
-<img src="biryani.jpg">
 
-<h3>veg biryani</h3>
 
-<p>$8</p>
 
-<button>Add to Cart</button>
+<div class="product-card">
+
+
+<img src="images/kids-wear.jpg">
+
+
+<h3>
+Kids Fashion Wear
+</h3>
+
+
+<p>
+₹599
+</p>
+
+
+<button>
+Add To Cart
+</button>
+
 
 </div>
 
-<div class="dish">
 
-<img src="tikka.jpg">
 
-<h3>chikan tikka</h3>
 
-<p>$13</p>
 
-<button>Add to Cart</button>
+<div class="product-card">
+
+
+<img src="images/jacket.jpg">
+
+
+<h3>
+Winter Jacket
+</h3>
+
+
+<p>
+₹1999
+</p>
+
+
+<button>
+Add To Cart
+</button>
+
 
 </div>
 
+
+
 </div>
+
 
 </section>
 
-<!-- ================= OFFERS ================= -->
 
-<section class="offers">
 
-<h2>Today's Offers</h2>
 
-<div class="offer-box">
 
-<h1>40% OFF</h1>
 
-<p>Use Coupon: SAVE40</p>
+<!-- PRODUCT DETAILS -->
 
-<button>Claim Offer</button>
+
+<section class="product-details" id="productDetails">
+
+
+<h2>
+Product Details
+</h2>
+
+
+
+<div class="details-container">
+
+
+<div class="details-image">
+
+<img id="detailImage" src="shirt.jpg">
 
 </div>
+
+
+
+<div class="details-info">
+
+
+<h2 id="detailTitle">
+Product Name
+</h2>
+
+
+<p id="detailDescription">
+
+Premium quality fashion product.
+
+</p>
+
+
+<h3 id="detailPrice">
+₹799
+</h3>
+
+
+<label>
+Size
+</label>
+
+
+<select id="detailSize">
+
+<option>S</option>
+
+<option>M</option>
+
+<option>L</option>
+
+<option>XL</option>
+
+</select>
+
+
+
+
+<label>
+Color
+</label>
+
+
+<select id="detailColor">
+
+<option>Black</option>
+
+<option>Blue</option>
+
+<option>White</option>
+
+</select>
+
+
+
+<button onclick="addToCart()">
+
+Add To Cart
+
+</button>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
-<!-- ================= REVIEWS ================= -->
 
-<section class="reviews">
 
-<h2>Customer Reviews</h2>
 
-<div class="review-grid">
 
-<div class="review">
 
-<h3>Rahul</h3>
 
-<p>⭐⭐⭐⭐⭐</p>
+<!-- CART -->
 
-<p>Amazing food and quick delivery.</p>
 
-</div>
+<section id="cart">
 
-<div class="review">
 
-<h3>Priya</h3>
+<h2>
+Shopping Cart
+</h2>
 
-<p>⭐⭐⭐⭐⭐</p>
 
-<p>Best pizza in town!</p>
+<div id="cartItems">
+
+No Items
 
 </div>
 
-<div class="review">
 
-<h3>Aman</h3>
 
-<p>⭐⭐⭐⭐☆</p>
+<div class="cart-total">
 
-<p>Excellent customer service.</p>
+Total :
+₹<span id="cartTotal">
+0
+</span>
 
 </div>
 
-</div>
+
+
+<button onclick="checkout()">
+
+Checkout
+
+</button>
+
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+
+
+
+
+
+<!-- CHECKOUT -->
+
+
+<section id="checkout">
+
+
+<h2>
+Checkout
+</h2>
+
+
+<form>
+
+
+<input type="text" placeholder="Full Name">
+
+
+<input type="text" placeholder="Address">
+
+
+<input type="text" placeholder="City">
+
+
+<input type="text" placeholder="Pincode">
+
+
+<select>
+
+<option>
+Cash On Delivery
+</option>
+
+<option>
+UPI
+</option>
+
+<option>
+Credit Card
+</option>
+
+</select>
+
+
+
+<input type="text" placeholder="Coupon Code">
+
+
+<button type="button">
+
+Place Order
+
+</button>
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ACCOUNT -->
+
+
+<section id="account">
+
+
+<h2>
+My Account
+</h2>
+
+
+<div class="account-box">
+
+
+<h3>
+Profile
+</h3>
+
+
+<p>
+Name : Demo User
+</p>
+
+
+<p>
+Email : demo@gmail.com
+</p>
+
+
+
+<h3>
+Wishlist
+</h3>
+
+
+<div id="wishlistItems">
+
+</div>
+
+
+
+<h3>
+Orders
+</h3>
+
+
+<div id="orders">
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<section id="about">
+
+
+<h2>
+About StyleHub
+</h2>
+
+
+<p>
+
+StyleHub provides premium fashion collections for Men, Women and Kids.
+Our mission is affordable luxury with sustainable fashion.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section id="contact">
+
+
+<h2>
+Contact Us
+</h2>
+
+
+<form>
+
+
+<input placeholder="Name">
+
+
+<input placeholder="Email">
+
+
+<textarea placeholder="Message"></textarea>
+
+
+<button>
+Send
+</button>
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- LOGIN -->
+
+
+<div id="loginModal" class="modal">
+
+
+<div class="modal-content">
+
+
+<span class="close" onclick="closeLogin()">
+
+&times;
+
+</span>
+
+
+<h2>
+Login
+</h2>
+
+
+<input type="email" placeholder="Email">
+
+
+<input type="password" placeholder="Password">
+
+
+<button>
+Login
+</button>
+
+
+<hr>
+
+
+<h3>
+Create Account
+</h3>
+
+
+<input placeholder="Name">
+
+
+<input placeholder="Email">
+
+
+<input placeholder="Password">
+
+
+<button>
+Register
+</button>
+
+
+</div>
+
+
+</div>
+
+<!-- FOOTER -->
+
 
 <footer>
 
-<p>
-
-© 2026 FreshBite
-
-</p>
 
 <p>
 
-Fast Delivery | Fresh Food | Secure Payment
+© 2026 StyleHub Fashion Store
 
 </p>
+
 
 </footer>
 
-<script src="app.js"></script>
+
+
+<script src="script.js"></script>
 
 
 </body>
+
 </html>
+```
